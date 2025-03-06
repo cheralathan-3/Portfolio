@@ -1,0 +1,73 @@
+/* responsive.css - Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #f0f5ff; /* Updated mobile menu background */
+        text-align: right;
+        padding: 10px 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #main {
+    flex-direction: column; /* Stack left and right sections vertically */
+    align-items: center; /* Center items */
+    }
+
+    .right {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add space between photo and content */
+    }
+
+    #assignments {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    padding: 20px;
+    height: auto;
+    }
+
+    /* Adjust assignments.html layout for smaller screens */
+    .container {
+        height: auto; /* Allow container to grow with content */
+        overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+
+    section {
+        height: auto; /* Allow sections to grow with content */
+        padding: 20px; /* Add padding for better spacing */
+        flex-direction: column; /* Stack content vertically */
+        align-items: stretch; /* Stretch content to fill width */
+    }
+
+    .assignment-content {
+        text-align: left; /* Align text left on smaller screens */
+    }
+
+    #subject-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #assignments {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+    }
+
+    #subject-grid {
+    grid-template-columns: 1fr;
+    }
+}

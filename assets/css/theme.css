@@ -1,0 +1,181 @@
+/* theme.css - Modern and Elegant Blue Theme (Light and Dark) */
+
+/* 🚀 Prevent Flash Before Theme Loads */
+html {
+    visibility: hidden;
+    opacity: 0;
+    transition: none;
+}
+
+/* ✅ Reveal Content After Theme is Applied */
+html.loaded {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 🎨 Light Mode (Modern Elegant Blue) */
+body {
+    background: #e6f7ff;
+    color: #333;
+}
+
+header {
+    background-color: #f0f5ff;
+}
+
+nav ul li a {
+    color: #1890ff;
+}
+
+nav ul li a:hover {
+    color: #096dd9;
+}
+
+.right h1 {
+    color: #595959;
+}
+
+.right h1 span, #typing {
+    color: #1890ff;
+}
+
+.right p {
+    color: #595959;
+}
+
+.social-icons a {
+    color: #8c8c8c;
+}
+
+.social-icons a:hover {
+    color: #1890ff;
+}
+
+.hire-me {
+    background-color: transparent;
+    color: #1890ff;
+    border: 2px solid #1890ff;
+}
+
+.hire-me:hover {
+    background-color: #096dd9; /* Darker blue background on hover */
+    color: white;
+    border-color: #096dd9; /* Darker border on hover */
+}
+
+#contact-btn {
+background: #1890ff;
+color: white;
+}
+
+#contact-btn:hover {
+background: #096dd9;
+}
+
+/* 🌙 Dark Mode (Modern Elegant Blue) */
+body.dark-mode {
+    background: #191928;
+    color: #d9e3ea;
+}
+
+/* 🔹 Dark Mode Header & Navigation */
+body.dark-mode header {
+    background: #141421;
+    color: #d9e3ea;
+}
+
+body.dark-mode nav ul li a {
+    color: #40a9ff;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #1d39c4;
+}
+
+body.dark-mode .dropdown-menu {
+    background: #1f1f33; /* Dark background for dropdown */
+}
+
+body.dark-mode .hire-me:hover {
+    background-color: #1d39c4; /* Darker blue background on hover */
+    color: white;
+    border-color: #1d39c4; /* Darker border on hover */
+}
+
+/* 🎨 Dark Mode Buttons */
+body.dark-mode .button,
+body.dark-mode #contact-btn {
+    background: #40a9ff;
+    color: #141421;
+}
+
+body.dark-mode .button:hover,
+body.dark-mode #contact-btn:hover {
+    background: #1d39c4;
+}
+
+/* 📌 Dark Mode Assignments */
+body.dark-mode .assignment {
+    background: #141421;
+    color: #a3b7c2;
+    box-shadow: 0px 4px 10px rgba(64, 169, 255, 0.1);
+}
+
+body.dark-mode .assignment:hover {
+    background: #1f1f33;
+    box-shadow: 0px 6px 15px rgba(64, 169, 255, 0.2);
+}
+
+/* 📝 Dark Mode Contact Form */
+body.dark-mode .contact-container {
+    background: #141421;
+    color: #d9e3ea;
+    box-shadow: 0px 10px 30px rgba(64, 169, 255, 0.1);
+}
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group textarea {
+    background: #1f1f33;
+    color: #d9e3ea;
+    border: 2px solid #404059;
+}
+
+body.dark-mode .input-group input:focus,
+body.dark-mode .input-group textarea:focus {
+    border-color: #40a9ff;
+    box-shadow: 0px 4px 10px rgba(64, 169, 255, 0.2);
+}
+
+/* Dark mode assignment content */
+body.dark-mode .assignment-content {
+    color: #d9e3ea;
+}
+
+/* Dark mode contact form place holder text color */
+body.dark-mode .input-group input::placeholder,
+body.dark-mode .input-group textarea::placeholder{
+    color: #a3b7c2;
+}
+
+/* Dark mode Subject Grid */
+body.dark-mode .subject {
+    background-color: #1f1f33;
+    color: #d9e3ea;
+    box-shadow: 0px 4px 10px rgba(64, 169, 255, 0.2);
+}
+
+body.dark-mode .subject:hover {
+    background-color: #141421;
+    box-shadow: 0px 6px 15px rgba(64, 169, 255, 0.3);
+}
+
+/* Assignments Page Sections */
+.assignments-container section {
+    background-color: inherit; /* Inherit background from body */
+}
+
+/* Dark Mode Assignments Page Sections */
+body.dark-mode .assignments-container section {
+    background-color: inherit; /* Inherit background from body */
+}
