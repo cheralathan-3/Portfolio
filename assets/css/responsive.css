@@ -8,9 +8,13 @@
         top: 60px;
         right: 0;
         width: 100%;
-        background-color: #f0f5ff; /* Updated mobile menu background */
+        background-color: #f0f5ff; /* Mobile menu background */
         text-align: right;
         padding: 10px 20px;
+    }
+
+    body.dark-mode nav ul {
+        background-color: #141421; /* Dark mode header background */
     }
 
     nav ul.active {

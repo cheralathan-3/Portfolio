@@ -11,7 +11,7 @@ html {
 html.loaded {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3 ease-in-out;
 }
 
 /* 🎨 Light Mode (Modern Elegant Blue) */
