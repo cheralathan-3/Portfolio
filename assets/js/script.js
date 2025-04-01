@@ -30,41 +30,20 @@ function eraseText() {
 
 typeText();
 
-// // Get the button
-// let backToTopButton = document.getElementById("back-to-top-btn");
-
-// // When the user scrolls, check position
-// window.addEventListener("scroll", function () {
-//     if (window.scrollY > 100) {
-//         backToTopButton.style.display = "block";
-//     } else {
-//         backToTopButton.style.display = "none";
-//     }
-// });
-
-// // Smooth scroll to top when clicked
-// backToTopButton.addEventListener("click", function () {
-//     window.scrollTo({ top: 0, behavior: "smooth" });
-// });
-
-
-// When the user scrolls down from the top of the document, show the button
+// scroll to top
 window.onscroll = function () {
-    scrollFunction();
-};
+    let backToTopButton = document.getElementById("back-to-top-btn");
 
-function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         backToTopButton.style.display = "block";
     } else {
         backToTopButton.style.display = "none";
     }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-backToTopButton.addEventListener("click", function () {
-    // For Safari
-    document.body.scrollTop = 0;
-    // For Chrome, Firefox, IE and Opera
-    document.documentElement.scrollTop = 0;
-});
+    backToTopButton.addEventListener("click", function () {
+        // For Safari
+        document.body.scrollTop = 0;
+        // For Chrome, Firefox, IE and Opera
+        document.documentElement.scrollTop = 0;
+    });
+};

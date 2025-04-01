@@ -37,7 +37,6 @@ header {
 /* Sections */
 .container {
     height: 100vh;
-    /* overflow-y: scroll; */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
@@ -351,7 +350,20 @@ nav ul li a {
     scroll-snap-align: start;
 }
 
-#backToTopButton {
+/* Updated CSS for auto-aligning iframe grid */
+/* .iframe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Flexible columns */
+    grid-template-rows: auto-fit;
+    gap: 20px;
+}
+
+.iframe-grid iframe {   
+    width: auto;
+    height: 440px;
+} */
+
+#back-to-top-btn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -369,7 +381,7 @@ nav ul li a {
     transition: opacity 0.3s;
 }
 
-#backToTopButton:hover {
+#back-to-top-btn:hover {
     opacity: 1;
 }
 
