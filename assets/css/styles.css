@@ -351,7 +351,7 @@ nav ul li a {
     scroll-snap-align: start;
 }
 
-/* #back-to-top-btn {
+#backToTopButton {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -369,6 +369,7 @@ nav ul li a {
     transition: opacity 0.3s;
 }
 
-#back-to-top-btn:hover {
+#backToTopButton:hover {
     opacity: 1;
-} */
+}
+
