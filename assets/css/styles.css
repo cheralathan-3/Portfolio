@@ -19,7 +19,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    /* overflow: hidden; */
 }
 
 /* Header */
@@ -38,7 +37,7 @@ header {
 /* Sections */
 .container {
     height: 100vh;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
@@ -88,7 +87,6 @@ nav ul li a {
 .dropdown-menu a {
     display: block;
     width: 100%;
-    /* Make the link fill the entire row */
     padding: 10px;
     text-decoration: none;
     color: inherit;
@@ -288,18 +286,6 @@ nav ul li a {
     justify-content: center;
 }
 
-#subject-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    max-height: 80vh;
-}
-
 .subject {
     background: white;
     padding: 20px;
@@ -310,6 +296,10 @@ nav ul li a {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .subject:hover {
@@ -323,9 +313,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    /* Add padding for smaller screens */
     box-sizing: border-box;
-    /* Include padding in height calculation */
 }
 
 #subject-grid {
@@ -333,24 +321,22 @@ nav ul li a {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
+    padding: 20px;
     width: 100%;
     max-width: 1200px;
+    margin: 20px auto;
     max-height: 80vh;
     box-sizing: border-box;
-    /* Include padding in width calculation */
 }
 
 .subject-link {
     text-decoration: none;
-    /* Remove underline from links */
     color: inherit;
-    /* Inherit text color from parent */
 }
 
 /* Assignments container */
 .assignments-container {
     height: 100vh;
-    overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
@@ -364,3 +350,25 @@ nav ul li a {
     font-size: 2rem;
     scroll-snap-align: start;
 }
+
+/* #back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+#back-to-top-btn:hover {
+    opacity: 1;
+} */
