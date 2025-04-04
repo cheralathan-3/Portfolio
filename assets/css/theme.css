@@ -1,20 +1,18 @@
-/* theme.css - Modern and Elegant Blue Theme (Light and Dark) */
-
-/* 🚀 Prevent Flash Before Theme Loads */
+/*  Prevent Flash Before Theme Loads */
 html {
     visibility: hidden;
     opacity: 0;
     transition: none;
 }
 
-/* ✅ Reveal Content After Theme is Applied */
+/* Reveal Content After Theme is Applied */
 html.loaded {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3 ease-in-out;
 }
 
-/* 🎨 Light Mode (Modern Elegant Blue) */
+/* Light Mode (Modern Elegant Blue) */
 body {
     background: #e6f7ff;
     color: #333;
@@ -29,7 +27,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #096dd9;
+    color: #3556fc
 }
 
 .right h1 {
@@ -45,7 +43,7 @@ nav ul li a:hover {
 }
 
 .social-icons a {
-    color: #8c8c8c;
+    color: #5c5c5c;
 }
 
 .social-icons a:hover {
@@ -59,9 +57,9 @@ nav ul li a:hover {
 }
 
 .hire-me:hover {
-    background-color: #096dd9; /* Darker blue background on hover */
+    background-color: #096dd9;
     color: white;
-    border-color: #096dd9; /* Darker border on hover */
+    border-color: #096dd9;
 }
 
 #contact-btn {
@@ -73,13 +71,13 @@ color: white;
 background: #096dd9;
 }
 
-/* 🌙 Dark Mode (Modern Elegant Blue) */
+/* Dark Mode (Modern Elegant Blue) */
 body.dark-mode {
     background: #191928;
     color: #d9e3ea;
 }
 
-/* 🔹 Dark Mode Header & Navigation */
+/* Dark Mode Header & Navigation */
 body.dark-mode header {
     background: #141421;
     color: #d9e3ea;
@@ -94,16 +92,16 @@ body.dark-mode nav ul li a:hover {
 }
 
 body.dark-mode .dropdown-menu {
-    background: #1f1f33; /* Dark background for dropdown */
+    background: #1f1f33;
 }
 
 body.dark-mode .hire-me:hover {
-    background-color: #1d39c4; /* Darker blue background on hover */
+    background-color: #1d39c4;
     color: white;
-    border-color: #1d39c4; /* Darker border on hover */
+    border-color: #1d39c4;
 }
 
-/* 🎨 Dark Mode Buttons */
+/* Dark Mode Buttons */
 body.dark-mode .button,
 body.dark-mode #contact-btn {
     background: #40a9ff;
@@ -115,7 +113,7 @@ body.dark-mode #contact-btn:hover {
     background: #1d39c4;
 }
 
-/* 📌 Dark Mode Assignments */
+/* Dark Mode Assignments */
 body.dark-mode .assignment {
     background: #141421;
     color: #a3b7c2;
@@ -127,7 +125,7 @@ body.dark-mode .assignment:hover {
     box-shadow: 0px 6px 15px rgba(64, 169, 255, 0.2);
 }
 
-/* 📝 Dark Mode Contact Form */
+/* Dark Mode Contact Form */
 body.dark-mode .contact-container {
     background: #141421;
     color: #d9e3ea;
@@ -177,5 +175,5 @@ body.dark-mode .subject:hover {
 
 /* Dark Mode Assignments Page Sections */
 body.dark-mode .assignments-container section {
-    background-color: inherit; /* Inherit background from body */
+    background-color: inherit;
 }

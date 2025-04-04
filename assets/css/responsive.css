@@ -8,13 +8,13 @@
         top: 60px;
         right: 0;
         width: 100%;
-        background-color: #f0f5ff; /* Mobile menu background */
+        background-color: #f0f5ff;
         text-align: right;
         padding: 10px 20px;
     }
 
     body.dark-mode nav ul {
-        background-color: #141421; /* Dark mode header background */
+        background-color: #141421;
     }
 
     nav ul.active {
@@ -26,52 +26,89 @@
     }
 
     #main {
-    flex-direction: column; /* Stack left and right sections vertically */
-    align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .right {
-        margin-left: 0; /* Remove left margin */
-        margin-top: 20px; /* Add space between photo and content */
+        margin-left: 0;
+        margin-top: 20px;
     }
 
     #assignments {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 15px;
-    padding: 20px;
-    height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 15px;
+        padding: 20px;
+        height: auto;
     }
 
     /* Adjust assignments.html layout for smaller screens */
     .container {
-        height: auto; /* Allow container to grow with content */
-        overflow-y: auto; /* Enable scrolling if content overflows */
+        height: auto;
+        overflow-y: auto;
     }
 
     section {
-        height: auto; /* Allow sections to grow with content */
-        padding: 20px; /* Add padding for better spacing */
-        flex-direction: column; /* Stack content vertically */
-        align-items: stretch; /* Stretch content to fill width */
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .assignment-content {
-        text-align: left; /* Align text left on smaller screens */
+        text-align: left;
     }
 
     #subject-grid {
-    grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    #assignments {
-    grid-template-columns: repeat(1, 1fr);
-    height: auto;
+    header {
+        padding: 10px;
+    }
+
+    header .name {
+        font-size: 1.2rem;
+    }
+
+    .right h1 {
+        font-size: 2rem;
+    }
+
+    #typing {
+        font-size: 1rem;
+    }
+
+    .right p {
+        font-size: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1rem;
+    }
+
+    .hire-me {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-container h2 {
+        font-size: 1.5rem;
     }
 
     #subject-grid {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .subject {
+        font-size: 1.2rem;
+        padding: 15px;
     }
 }

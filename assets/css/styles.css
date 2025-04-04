@@ -353,15 +353,17 @@ nav ul li a {
 /* Updated CSS for auto-aligning iframe grid */
 .iframe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Flexible columns */
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
     grid-template-rows: auto-fit;
     gap: 20px;
+    justify-content: center;
 }
 
-.iframe-grid iframe {   
+.iframe-grid iframe {
     width: auto;
-    height: 440px;
-} */
+    height: 550px;
+    width: 800px;
+}
 
 #back-to-top-btn {
     display: none;
@@ -384,4 +386,3 @@ nav ul li a {
 #back-to-top-btn:hover {
     opacity: 1;
 }
-

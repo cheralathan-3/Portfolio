@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -77,13 +77,13 @@
                     <h2>Contact Me</h2>
                     <form class="contact-form" action="https://formspree.io/f/mbldnejy" method="POST">
                         <div class="input-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input id="name" autocomplete="on" type="text" placeholder="Your Name" required>
                         </div>
                         <div class="input-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input id="email" autocomplete="on" type="email" placeholder="Your Email" required>
                         </div>
                         <div class="input-group">
-                            <textarea placeholder="Your Message" required></textarea>
+                            <textarea id="message" autocomplete="off" placeholder="Your Message" required></textarea>
                         </div>
                         <button id="contact-btn" type="submit">Send Message</button>
                     </form>
