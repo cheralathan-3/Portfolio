@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3 - Portfolio Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        header {
+            background: #2d3e50;
+            color: #fff;
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+        .home-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .home-btn svg {
+            width: 2rem;
+            height: 2rem;
+            fill: #fff;
+            vertical-align: middle;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+            padding: 2rem;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        .timeline {
+            margin: 2rem 0;
+            border-left: 3px solid #2d3e50;
+            padding-left: 1.5rem;
+        }
+        .timeline-event {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -1.1rem;
+            top: 0.3rem;
+            width: 1rem;
+            height: 1rem;
+            background: #2d3e50;
+            border-radius: 50%;
+        }
+        .timeline-event h3 {
+            margin: 0 0 0.5rem 0;
+            color: #2d3e50;
+        }
+        .reflection {
+            background: #f0f4f8;
+            border-left: 4px solid #2d3e50;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem;
+            border-radius: 4px;
+        }
+        nav {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        nav a {
+            color: #2d3e50;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="home-btn" title="Home">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
+        <h1>Assignment 3: Portfolio Development Journey</h1>
+        <p>Documenting the evolution of my portfolio website</p>
+    </header>
+    <!-- Navigation links removed as requested -->
+    <main>
+        <h2>Development Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-event">
+                <h3>Portfolio Foundation</h3>
+                <p>
+                    Created the initial structure of my portfolio using HTML and CSS. Focused on layout, navigation, and a simple, clean design. Learned about semantic HTML and responsive design basics.
+                </p>
+            </div>
+            <div class="timeline-event">
+                <h3>Enhancing with Interactivity</h3>
+                <p>
+                    Added interactive elements using JavaScript. Improved user experience with dynamic content and transitions. Explored DOM manipulation and event handling.
+                </p>
+            </div>
+            <div class="timeline-event">
+                <h3>Documenting the Journey</h3>
+                <p>
+                    This page showcases the development process of my portfolio. It reflects on the skills gained and the improvements made through each assignment.
+                </p>
+            </div>
+        </div>
+        <section class="reflection">
+            <h2>Reflection</h2>
+            <p>
+                Building this portfolio has helped me understand the importance of planning, iteration, and feedback in web development. Each assignment challenged me to learn new concepts and apply them creatively. I look forward to further enhancing my portfolio with more advanced features and personal projects.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
