@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+    <meta charset="UTF-8">
+    <title>Assignment 1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            background: #222;
+            height: 120px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .header-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+            text-decoration: none;
+            border-right: 1px solid #333;
+            height: 100%;
+        }
+        .header-section:last-child { border-right: none; }
+        .header-section:hover,
+        .header-section:focus {
+            background: #00bcd4;
+            color: #222;
+            outline: none;
+        }
+        main { padding-top: 140px; }
+        section {
+            padding: 60px 30px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            max-width: 900px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            scroll-margin-top: 130px;
+        }
+        section:first-of-type { margin-top: 30px; }
+        h2 { color: #00bcd4; margin-bottom: 20px; }
+        img, video, iframe {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1.5px solid #ddd;
+        }
+        .flex-row {
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .img-small { max-width: 320px; }
+        .img-medium {
+            max-width: 350px;
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+        .iframe-figma {
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            width: 800px;
+            height: 450px;
+        }
+        .divider {
+            width: 100%;
+            max-width: 624px;
+            height: 3px;
+            margin: 24px 0;
+            background: #ddd;
+            border-radius: 2px;
+            border: none;
+            display: block;
+        }
+        .resource-iframe {
+            border:1px solid #ccc;
+            border-radius:8px;
+            max-width:640px;
+        }
+        .video-demo {
+            max-width:640px;
+            border-radius:8px;
+            border:1.5px solid #ddd;
+            box-shadow:0 2px 8px rgba(0,0,0,0.08);
+        }
+        ul, ol { margin-top: 0; }
+        h3, h4, h5 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="header-section" style="justify-content: center; max-width: 80px;">
+            <span style="display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 24 24" style="vertical-align: middle;">
+                    <path d="M12 3l9 8h-3v9h-12v-9h-3z" stroke="#fff" stroke-width="1.5" fill="none" />
+                    <path d="M9 21v-6h6v6" fill="none" stroke="#fff" stroke-width="1.5" />
+                </svg>
+            </span>
+        </a>
+        <a href="#think-like-a-coder" class="header-section">Think Like a Coder</a>
+        <a href="#scratch-and-app-development" class="header-section">Scratch and App Development</a>
+    </header>
+    <main>
+        <!-- think like a coder -->
+        <section id="think-like-a-coder">
+            <h2>Think Like a Coder</h2>
+            <hr class="divider" />
+            <h3 style="color: #8c7252;">Flowchart &amp; Algorithm</h3>
+            <div class="flex-row">
+                <div>
+                    <h4 style="color: #222; margin-bottom: 10px;">Coffee Making</h4>
+                    <img src="./assignment-images/coding-for-innovators/image2.png" alt="Coffee Making Flowchart" style="width:100%;max-width:551.99px;height:auto;display:block;margin-bottom:12px;">
+                    <ul>
+                        <li>Step 1: Check whether the coffee should be hot or cold.</li>
+                        <li>Step 2: If cold, prepare cold water/milk and add coffee concentrate; else if hot, boil the water and add coffee powder, allow it to brew/steep.</li>
+                        <li>Step 3: Add milk/sugar if needed.</li>
+                        <li>Step 4: Pour the coffee into a cup and serve it.</li>
+                        <li>Step 5: Stop the process.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div>
+                    <h4 style="color: #222; margin-bottom: 10px;">Episode 1: The Prison Break</h4>
+                    <img src="./assignment-images/coding-for-innovators/image6.png" alt="Prison Break Flowchart" style="width:100%;max-width:474.69px;height:auto;display:block;margin-bottom:12px;">
+                    <ul>
+                        <li>Step 1: Insert the key into the dial.</li>
+                        <li>Step 2: Check if the dial’s color is green, go to step 4. Else go to step 3.</li>
+                        <li>Step 3: Get the key to the next position and check the dial’s color again.</li>
+                        <li>Step 4: Unlock the door and escape the prison cell.</li>
+                        <li>Step 5: Stop the process.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div>
+                    <h4 style="color: #222; margin-bottom: 10px;">Episode 2: The Resistance</h4>
+                    <img src="./assignment-images/coding-for-innovators/image1.png" alt="The Resistance Flowchart" style="width:100%;max-width:562.71px;height:auto;display:block;margin-bottom:12px;">
+                    <ul>
+                        <li>Step 1: Check for a person with green eyes.</li>
+                        <li>Step 2: If found,
+                            <ul>
+                                <li>a) Check whether they wear glasses and their name contains 2 vowels.</li>
+                                <li>b) If no glasses, check whether their name has three vowels.</li>
+                                <li>c) If neither, check if they have red hair and their name has at least two consecutive letters.</li>
+                            </ul>
+                        </li>
+                        <li>Step 3: If step two fails, go to step 1. Else go to step 4.</li>
+                        <li>Step 4: Leader found, initiate contact.</li>
+                        <li>Step 5: Stop the process.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div>
+                    <h4 style="color: #222; margin-bottom: 10px;">Episode 3: The Furnace Bots</h4>
+                    <img src="./assignment-images/coding-for-innovators/image3.png" alt="Furnace Bots Flowchart" style="width:100%;max-width:415.16px;height:auto;display:block;margin-bottom:12px;">
+                    <ul>
+                        <li>Step 1: Pick a bot and check its furnace number.</li>
+                        <li>Step 2: If the furnace number is zero, go to step 4. Else go to step 3.</li>
+                        <li>Step 3: Check for the bot with its serial number matching the recent bot’s furnace number. Repeat from step 2.</li>
+                        <li>Step 4: Insert the hijack code into the bot with furnace number 0.</li>
+                        <li>Step 5: Stop the process.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div>
+                    <h4 style="color: #222; margin-bottom: 10px;">Episode 4: The Train Heist</h4>
+                    <img src="./assignment-images/coding-for-innovators/image7.png" alt="Train Heist Flowchart" style="width:100%;max-width:434px;height:auto;display:block;margin-bottom:12px;">
+                    <ul>
+                        <li>Step 1: Assign a variable with value zero as the starting position.</li>
+                        <li>Step 2:
+                            <ul>
+                                <li>a) If the train moves left, decrement the variable by 1.</li>
+                                <li>b) If it moves right, increment the variable by 1.</li>
+                            </ul>
+                        </li>
+                        <li>Step 3: Check if the variable reached 10.
+                            <ul>
+                                <li>a) If yes, go to step 4.</li>
+                                <li>b) If not, go to step 2.</li>
+                            </ul>
+                        </li>
+                        <li>Step 4: Steal the ‘node of power’.</li>
+                        <li>Step 5: Stop the process.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- scratch and app development -->
+        <section id="scratch-and-app-development">
+            <h2>Scratch and App Development</h2>
+            <h3 style="color: #8c7252;">Resources</h3>
+            <ul>
+                <li>
+                    <h4>Scratch Game</h4>
+                    <ul>
+                        <li>
+                            <a href="./assignment-docs/scratch-game.pdf" target="_blank">Scratch Game (PDF)</a>
+                            <div style="margin-top: 8px;">
+                                <iframe src="./assignment-docs/scratch-game.pdf#toolbar=1&view=FitH" width="640" height="400" class="resource-iframe"></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Scratch Story</h4>
+                    <ul>
+                        <li>
+                            <a href="./assignment-docs/scratch-story.pdf" target="_blank">Scratch Story (PDF)</a>
+                            <div style="margin-top: 8px;"></div>
+                                <iframe src="./assignment-docs/scratch-story.pdf#toolbar=1&view=FitH" width="640" height="400" class="resource-iframe"></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 16px;">
+                        <h5>Scratch Story Demo Video</h5>
+                        <video controls width="640" height="360" class="video-demo">
+                            <source src="./assignment-videos/scratch-story.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </li>
+                <li>
+                    <h4>MIT App</h4>
+                    <ul>
+                        <li>
+                            <a href="./assignment-docs/app-dev.pdf" target="_blank">MIT App (PDF)</a>
+                            <div style="margin-top: 8px;">
+                                <iframe src="./assignment-docs/app-dev.pdf#toolbar=1&view=FitH" width="640" height="400" class="resource-iframe"></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
