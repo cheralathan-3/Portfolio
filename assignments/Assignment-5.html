@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 5 - Industrial Automation, Robotics</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            background: #222;
+            height: 120px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .header-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+            text-decoration: none;
+            border-right: 1px solid #333;
+            height: 100%;
+        }
+        .header-section:last-child {
+            border-right: none;
+        }
+        .header-section:hover,
+        .header-section:focus {
+            background: #00bcd4;
+            color: #222;
+            outline: none;
+        }
+        .home-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            min-width: 60px;
+            border-right: 1px solid #333;
+            text-decoration: none;
+            color: #fff;
+            transition: background 0.3s, color 0.3s;
+        }
+        .home-link:hover,
+        .home-link:focus {
+            background: #00bcd4;
+            color: #222;
+            outline: none;
+        }
+        main {
+            padding-top: 140px;
+        }
+        section {
+            padding: 60px 30px;
+            margin-top: 30px;
+            background: #fff;
+            border-radius: 8px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            scroll-margin-top: 130px;
+        }
+        section:not(:first-of-type) {
+            margin-top: 40px;
+        }
+        h2 {
+            color: #00bcd4;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="home-link" style="justify-content: center;">
+            <span style="display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 24 24" style="vertical-align: middle;">
+                    <path d="M12 3l9 8h-3v9h-12v-9h-3z" stroke="#fff" stroke-width="1.5" fill="none" />
+                    <path d="M9 21v-6h6v6" fill="none" stroke="#fff" stroke-width="1.5" />
+                </svg>
+            </span>
+        </a>
+        <a href="#industrial-automation" class="header-section">
+            <span>Industrial Automation</span>
+            <span style="font-size:0.95rem;color:#b0c4d8;">Processes & Control</span>
+        </a>
+        <a href="#robotics" class="header-section">
+            <span>Robotics</span>
+            <span style="font-size:0.95rem;color:#b0c4d8;">Machines & Intelligence</span>
+        </a>
+    </header>
+    <main>
+        <section id="industrial-automation">
+            <h2>Industrial Automation</h2>
+            <p><!-- Add your content here --></p>
+        </section>
+        <section id="robotics">
+            <h2>Robotics</h2>
+            <p><!-- Add your content here --></p>
+        </section>
+    </main>
+</body>
+</html>
