@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Assignment 5 - Industrial Automation, Robotics</title>
@@ -9,6 +10,7 @@
             font-family: Arial, sans-serif;
             background: #f5f5f5;
         }
+
         header {
             display: flex;
             justify-content: space-between;
@@ -22,6 +24,7 @@
             width: 100%;
             z-index: 100;
         }
+
         .header-section {
             flex: 1;
             display: flex;
@@ -36,15 +39,18 @@
             border-right: 1px solid #333;
             height: 100%;
         }
+
         .header-section:last-child {
             border-right: none;
         }
+
         .header-section:hover,
         .header-section:focus {
             background: #00bcd4;
             color: #222;
             outline: none;
         }
+
         .home-link {
             display: flex;
             align-items: center;
@@ -56,15 +62,18 @@
             color: #fff;
             transition: background 0.3s, color 0.3s;
         }
+
         .home-link:hover,
         .home-link:focus {
             background: #00bcd4;
             color: #222;
             outline: none;
         }
+
         main {
             padding-top: 140px;
         }
+
         section {
             padding: 60px 30px;
             margin-top: 30px;
@@ -76,23 +85,28 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             scroll-margin-top: 130px;
         }
+
         section:not(:first-of-type) {
             margin-top: 40px;
         }
+
         h2 {
             color: #00bcd4;
             margin-bottom: 20px;
         }
+
         p {
             color: #222;
         }
     </style>
 </head>
+
 <body>
     <header>
         <a href="../index.html" class="home-link" style="justify-content: center;">
             <span style="display: flex; align-items: center; justify-content: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 24 24" style="vertical-align: middle;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 24 24"
+                    style="vertical-align: middle;">
                     <path d="M12 3l9 8h-3v9h-12v-9h-3z" stroke="#fff" stroke-width="1.5" fill="none" />
                     <path d="M9 21v-6h6v6" fill="none" stroke="#fff" stroke-width="1.5" />
                 </svg>
@@ -108,14 +122,194 @@
         </a>
     </header>
     <main>
+        <!-- industrial automation -->
         <section id="industrial-automation">
             <h2>Industrial Automation</h2>
-            <p><!-- Add your content here --></p>
+            <div style="display: flex; justify-content: center;">
+                <embed src="./assignment-docs/ia-assignment.pdf" type="application/pdf" width="700px" height="900px"
+                    style="border:1px solid #ccc; border-radius:8px;" />
+            </div>
         </section>
+
+        <!-- robotics -->
         <section id="robotics">
             <h2>Robotics</h2>
-            <p><!-- Add your content here --></p>
+            <div style="margin-bottom: 40px;">
+                <h3>ROS Installation and URDF File Creation</h3>
+                <p>
+                    <strong>Creating and Simulating a Robot in ROS2 &amp; Gazebo using URDF and Fusion 360</strong>
+                </p>
+                <p>
+                    This documentation provides a step-by-step guide to simulate a mobile robot modeled in Fusion 360.
+                    The robot is described using URDF/Xacro, simulated in Gazebo, and controlled via ROS2.
+                </p>
+                <ol>
+                    <li>
+                        <strong>Robot Design in Fusion 360</strong>
+                        <ul>
+                            <li><strong>Overview:</strong> The robot was first modeled in Fusion 360 with the following
+                                components:
+                                <ul>
+                                    <li>Main chassis</li>
+                                    <li>Two side wheels for motion control</li>
+                                    <li>Two caster wheels (rotate freely for balance)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Exporting Model:</strong> Export each part (chassis, wheels, caster wheels) as
+                                STL or STEP files.<br>
+                                Ensure orientation: X-axis → Forward, Y-axis → Left, Z-axis → Up.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Setting Up the ROS2 Workspace</strong>
+                        <ul>
+                            <li>Create and initialize workspace:
+                                <pre><code>mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+ros2 pkg create --build-type ament_cmake &lt;robot_description_package&gt;</code></pre>
+                            </li>
+                            <li>Build and source:
+                                <pre><code>cd ~/ros2_ws
+colcon build
+source install/setup.bash</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Create URDF Files Using Xacro</strong>
+                        <ul>
+                            <li>Use Xacro to modularize your URDF file (e.g., <code>tea_bot.urdf.xacro</code>).</li>
+                            <li>Place .xacro and mesh files in a <code>urdf</code> directory inside your package.</li>
+                            <li>Define <code>base_link</code> as the root link, wheel joints, and caster wheels with
+                                correct origins and axes.</li>
+                            <li>Coordinate convention: X → Forward, Y → Left, Z → Up.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>URDF Structure and Link Setup</strong>
+                        <ul>
+                            <li><strong>Base Link:</strong> Root link at origin (0,0,0).
+                                <pre><code>&lt;link name="base_link"&gt;
+  &lt;visual&gt;...&lt;/visual&gt;
+  &lt;collision&gt;...&lt;/collision&gt;
+  &lt;inertial&gt;...&lt;/inertial&gt;
+&lt;/link&gt;</code></pre>
+                            </li>
+                            <li><strong>Connecting Wheels and Casters:</strong>
+                                <pre><code>&lt;joint name="left_wheel_joint" type="continuous"&gt;
+  &lt;parent link="base_link"/&gt;
+  &lt;child link="left_wheel"/&gt;
+  &lt;origin xyz="0 0.175 0" rpy="0 0 0"/&gt;
+  &lt;axis xyz="0 0 1"/&gt;
+&lt;/joint&gt;</code></pre>
+                                For right wheel: <code>&lt;axis xyz="0 0 -1"/&gt;</code>
+                            </li>
+                            <li><strong>Inertia:</strong>
+                                <pre><code>&lt;inertial&gt;
+  &lt;origin xyz="..." rpy="..."/&gt;
+  &lt;mass value="..."/&gt;
+  &lt;inertia ixx="..." iyy="..." izz="..." .../&gt;
+&lt;/inertial&gt;</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Launching in RViz (URDF Preview)</strong>
+                        <ul>
+                            <li>Run URDF with robot_state_publisher. Example <code>rsp.launch.py</code>:
+                                <pre><code>from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='robot_state_publisher',
+            executable='robot_state_publisher',
+            output='screen',
+            parameters=[{'robot_description': Command(['xacro ', PathJoinSubstitution([
+                FindPackageShare('your_package'),
+                'urdf',
+                'robot.urdf.xacro'
+            ])])}]
+        )
+    ])</code></pre>
+                            </li>
+                            <li>Run:
+                                <pre><code>ros2 launch &lt;your_package&gt; rsp.launch.py</code></pre>
+                            </li>
+                            <li>If the robot doesn’t appear correctly: click "Reset" in RViz, relaunch, and verify all
+                                paths.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Spawning Robot into Gazebo</strong>
+                        <ul>
+                            <li>
+                                <pre><code>ros2 run gazebo_ros spawn_entity.py -entity my_robot \
+  -file ~/ros2_ws/src/&lt;your_package&gt;/urdf/robot.urdf \
+  -x 0 -y 0 -z 0</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Adding ros2_control for Motion</strong>
+                        <ul>
+                            <li>Add control plugin to URDF:
+                                <pre><code>&lt;gazebo&gt;
+  &lt;plugin name="diff_drive_controller" filename="libgazebo_ros2_control.so"&gt;
+    &lt;left_wheel&gt;left_wheel_joint&lt;/left_wheel&gt;
+    &lt;right_wheel&gt;right_wheel_joint&lt;/right_wheel&gt;
+    &lt;wheel_separation&gt;0.35&lt;/wheel_separation&gt;
+    &lt;wheel_radius&gt;0.05&lt;/wheel_radius&gt;
+    &lt;command_topic&gt;cmd_vel&lt;/command_topic&gt;
+  &lt;/plugin&gt;
+&lt;/gazebo&gt;</code></pre>
+                            </li>
+                            <li>Set control parameters (max torque, acceleration, PID gains) in YAML or inside the
+                                plugin.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Teleoperation Control</strong>
+                        <ul>
+                            <li>Install teleop_twist_keyboard:
+                                <pre><code>sudo apt install ros-&lt;distro&gt;-teleop-twist-keyboard</code></pre>
+                            </li>
+                            <li>Run:
+                                <pre><code>ros2 run teleop_twist_keyboard teleop_twist_keyboard</code></pre>
+                            </li>
+                            <li>Use WASD keys to move the robot. Ensure <code>cmd_vel</code> is the subscribed topic.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Friction Settings (Optional)</strong>
+                        <ul>
+                            <li>Set friction coefficients for wheels using SDF or Gazebo <code>&lt;surface&gt;</code>
+                                tag in URDF:
+                                <pre><code>&lt;surface&gt;
+  &lt;friction&gt;
+    &lt;ode&gt;
+      &lt;mu&gt;1.0&lt;/mu&gt;
+      &lt;mu2&gt;1.0&lt;/mu2&gt;
+    &lt;/ode&gt;
+  &lt;/friction&gt;
+&lt;/surface&gt;</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+
+            <!-- gazebo simulation -->
+            <hr style="margin: 40px 0; border: none; border-top: 4px solid #4fafa7;">
+            <div>
+                <h3>Gazebo Simulation</h3>
+
+            </div>
         </section>
     </main>
 </body>
+
 </html>
