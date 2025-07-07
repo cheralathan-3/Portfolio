@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<robot name="tractor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find tractor_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find tractor_description)/urdf/tractor.trans" />
+<xacro:include filename="$(find tractor_description)/urdf/tractor.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0025883377290645466 -2.6567765223065907e-06 0.038309316274648626" rpy="0 0 0"/>
+    <mass value="1.3964800557783217"/>
+    <inertia ixx="0.001865" iyy="0.00794" izz="0.008156" ixy="0.0" iyz="-0.0" ixz="-0.000961"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tractor_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tractor_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_1">
+  <inertial>
+    <origin xyz="6.938893903907228e-18 -0.037499809085259156 -2.42861286636753e-17" rpy="0 0 0"/>
+    <mass value="0.44446074765743293"/>
+    <inertia ixx="0.00176" iyy="0.000548" izz="0.00176" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05 -0.037476 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tractor_description/meshes/rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05 -0.037476 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tractor_description/meshes/rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_1">
+  <inertial>
+    <origin xyz="-2.7755575615628914e-17 -0.037499999999999985 1.734723475976807e-18" rpy="0 0 0"/>
+    <mass value="0.09326554102959483"/>
+    <inertia ixx="0.000338" iyy="4.2e-05" izz="0.000338" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125 -0.0375 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tractor_description/meshes/front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125 -0.0375 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tractor_description/meshes/front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 1" type="continuous">
+  <origin xyz="0.05 0.037476 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 2" type="continuous">
+  <origin xyz="-0.125 0.0375 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>
